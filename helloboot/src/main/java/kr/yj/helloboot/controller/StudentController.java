@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.yj.helloboot.model.Student;
+import kr.yj.helloboot.model.Ticket;
 import kr.yj.helloboot.repository.StudentRepository;
 
 @RestController
@@ -72,5 +73,10 @@ public class StudentController {
 	public List<Student> deleteStudentById(@PathVariable Long id) {
 		studentRepo.deleteById(id);
 		return studentRepo.findAll();
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, value="/ticket/all")
+	public List<Ticket> findAllTickets() {
+		return studentRepo.getAllTickets();
 	}
 }
