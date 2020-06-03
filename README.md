@@ -1,4 +1,4 @@
-# springboot.querydsl.and.swagger
+# springboot with querydsl, swagger
 Spring Boot에 Swagger, JPA, QueryDSL을 적용한 기본 프로젝트   
 
 ### 목적
